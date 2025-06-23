@@ -19,7 +19,7 @@ with open("temp_cred.json", "w") as f:
     json.dump(creds_dict, f)
 
 # Autenticação BigQuery via JSON
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "credenciais.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "temp_cred.json"
 
 # Cliente BigQuery
 client = bigquery.Client()
